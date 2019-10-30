@@ -11,9 +11,9 @@ export const useDarkMode = (key, initialValue) => {
 
     useEffect(( ) => {
         {value === true ? document.querySelector('body').classList.add('dark-mode') : document.querySelector('body').classList.remove('dark-mode')  }
-    })
+    }, [value])
 
-
+  return [value, setValue, handleChange] 
 } 
 
 
